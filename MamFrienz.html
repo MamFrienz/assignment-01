@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Simple Application</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" type="text/css">
+<style>
+body { background-color:#f7f7f7;}
+.container { margin:150px auto;}
+</style>
+</head>
+
+<body>
+
+
+</div>
+<div class="container">
+<h1>Auto Save and Remove</h1>
+<form>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="auto-save form-control" id="email" spellcheck="false">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="auto-save form-control" id="pwd">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Review:</label>
+    <textarea rows="3" class=" auto-save form-control" id="review"  spellcheck="false"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-danger destroy">Reset</button>
+</form>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="apps.js"></script>
+<script>
+$('.auto-save').apps('load');
+$( ".destroy" ).click(function() {
+  $('.auto-save').apps('destroy');
+});
+</script>
+
+</body>
+</html>
